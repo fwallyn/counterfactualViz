@@ -5,9 +5,8 @@
     <meta name="description" content="Data Dashboard">
     <meta name="author" content="Aboze Brain">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>VCNet visualization</title>
+    <title>Data Dashboard</title>
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="#">
     <!-- Load d3.js v5 -->
   </head>
 
@@ -18,39 +17,28 @@
       </header>
   
   <div id="right-bar">
-    <div id = "test-val"> </div>
-    <div id = "form-threshold">
-      <!-- <form method="post">
-        <label for="threshold">threshold</label>
-        <input id = "threshold" type="range" name="threshold"
-        min="0" max="1" value="0.5" step="0.1"></input>
-    </form> -->
-   <!--  <script>
-      let result = document.getElementById("test-val"); 
-      let el = document.querySelector("#threshold");
-      el.addEventListener("change", function(){result.innerHTML = el.value});
-    </script> -->
-    </div>
-    <div id="threshold-text"></div>
     <p id="choice-id">Choose the individual to visualize</p>
   </div>
 
   <div id = graph-container>
     <div id = "header-container">
-                  <div id="model-display">
+                  <div id="text-display">
+                  </div>
+
                   <div id="circle-class"></div>
+                  <div id="model-display">
                     <div id = "bars" >
                     </div>
                     <div id = "fleche" >
                     </div>
-                  </div>
-                  <div id = "pie"></div>    
+                    <div id = "pie"></div>
+                  </div>        
     </div>
     <!-- Div to manipulate -->
     <div id="d3"></div>
     <div id="text-description"></div>
-    <div id="circle-striped"></div>
   </div>
+
 </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -59,7 +47,6 @@
   </script>
   <script src="{{ url_for('static', filename='js/select.js') }}"></script>
   <script src="{{ url_for('static', filename='js/indiv_class.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/circle_striped.js') }}"></script>
   <script src="{{ url_for('static', filename='js/percentage_bar.js') }}"></script>
   <script src="{{ url_for('static', filename='js/pie_chart.js') }}"></script>
   <script src="{{ url_for('static', filename='js/main_graph.js') }}"></script>

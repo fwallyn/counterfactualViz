@@ -16,6 +16,7 @@ header
     display: grid;
     grid-template-columns: 15% 85%;
     grid-gap: 10px;
+    grid-template-columns: 10% 90%;
     justify-items: center;
   }
 
@@ -49,7 +50,6 @@ background-color: rgba(207,208,210,.2);
     height:15%;
     margin : auto;
     align-content: center;
-    justify-content: space-between;
 }
 #right-bar
 {   
@@ -80,7 +80,7 @@ background-color: rgba(207,208,210,.2);
 {
     width: 100px;
     height: 100px;
-    transform: translate(0px, 20px);
+    transform: translate(0px, 10px);
 }
 
 #choice-id
@@ -100,4 +100,3 @@ background-color: rgba(207,208,210,.2);
     flex-direction : column;
     justify-content: space-around;
 }
-
