@@ -12,7 +12,7 @@ Start the app by executing:
 ```
 python wgsi.py
 ```
-## Input Data as JSON Files
+## Input Data as JSON File
 
 To load a dataset, set the DATASET_PATH variable in the app.py file to the path of a .json file.
 
