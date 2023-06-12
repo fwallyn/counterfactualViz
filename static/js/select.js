@@ -1,4 +1,3 @@
-
 function parseProb(prob){
  /* Parse proba to add .0 when prob is 0 or 1 */
   var parse_prob = ""
@@ -25,9 +24,11 @@ function onchange(dataset,data_info,description) {
     var threshToPlot = thresholdsToPlot(dataset,selectValue)
     var obj = {}
     for (prob of threshToPlot){
-        obj[prob] = dataset[prob].proba_c[selectValue]
+        //obj[prob] = dataset[prob].proba_c[selectValue]
+        obj[prob] = dataset[prob].changes[indiv].n_changes
     }
-    var thresh = dataset["0.0"].y_x[selectValue] === 1 ? Object.keys(obj).reduce((key, v) => obj[v] < obj[key] ? v : key) : Object.keys(obj).reduce((key, v) => obj[v] > obj[key] ? v : key)
+    //var thresh = dataset["0.0"].y_x[selectValue] === 1 ? Object.keys(obj).reduce((key, v) => obj[v] < obj[key] ? v : key) : Object.keys(obj).reduce((key, v) => obj[v] > obj[key] ? v : key)
+    var thresh = Object.keys(obj).reduce((key, v) => obj[v] < obj[key] ? v : key)
     /* Construct new threshold range */
     //makeSelectThreshold(dataset,data_info)
     /* Get new prob depending on the threshold */
@@ -190,4 +191,3 @@ var options = select
 makeSelectChanges(dataset[thresh],data_info[thresh],id_indiv,description);
 //makeSelectThreshold(dataset,data_info);
 };
-
