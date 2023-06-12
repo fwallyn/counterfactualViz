@@ -25,7 +25,7 @@ function onchange(dataset,data_info,description) {
     var obj = {}
     for (prob of threshToPlot){
         //obj[prob] = dataset[prob].proba_c[selectValue]
-        obj[prob] = dataset[prob].changes[indiv].n_changes
+        obj[prob] = dataset[prob].changes[selectValue].n_changes
     }
     //var thresh = dataset["0.0"].y_x[selectValue] === 1 ? Object.keys(obj).reduce((key, v) => obj[v] < obj[key] ? v : key) : Object.keys(obj).reduce((key, v) => obj[v] > obj[key] ? v : key)
     var thresh = Object.keys(obj).reduce((key, v) => obj[v] < obj[key] ? v : key)
